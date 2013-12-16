@@ -5,8 +5,12 @@ Aligned Rank TransformR: An R port of Jacob Wobbrock's (C#) ARTool (https://dept
 
 Ported to R by Juan Sebastián Casallas in 2013
 
-The Aligned Rank Transform (ART) allows using parametric tests on nonparametric data, more details about ARTool and ART
-are presented in the ARTool website and in [2].
+The Aligned Rank Transform (ART) allows using parametric tests on nonparametric data.
+The ARTool is a C# program that does this transformation on an input dataset, and generates 
+a new dataset with extra aligned and ranked columns. Its main limitation is that it's only
+available for Windows (or, if you're courageous to Unix via Mono), and it involves an external
+step in the data analysis worflow. Thus, I've created this R port to integrate the ART in my usual
+*nix–R workflow. More details about ARTool and ART are presented in the ARTool website and in [2].
 
 Usage
 -----
