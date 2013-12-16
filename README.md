@@ -3,6 +3,8 @@ artR
 
 Aligned Rank TransformR: An R port of Jacob Wobbrock's (C#) ARTool (https://depts.washington.edu/aimgroup/proj/art/)
 
+Ported to R by Juan Sebastián Casallas in 2013
+
 The Aligned Rank Transform (ART) allows using parametric tests on nonparametric data, more details about ARTool and ART
 are presented in the ARTool website and in [2].
 
@@ -62,7 +64,7 @@ aligned |"aligned(Y) for X"    |"aligned.Y.X"
 ART     |"ART(Y) for X"        |"ART.Y.X"
         |"ART(Y) for X1*X2"    |"ART.Y.X1.x.X2"
 
-artR's column notation is shorter and allows using aligned and ART column names in R formulas, e.g. in `lmer` or `lm`.
+artR's column notation is shorter and allows using `aligned` and `ART` column names in R formulae, e.g. in `lmer` or `lm`.
 For example Table 4 in [1] can also be generated using:
 ```
 summary(aov(ART.Response.Row.x.Column ~ Row*Column, data=higgins1.art))
