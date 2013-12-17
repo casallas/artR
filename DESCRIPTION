@@ -1,0 +1,13 @@
+Package: artR
+Title: Aligned Rank TransformR
+Description: artR is an R port of Jacob Wobbrock's C# ARTool.
+    In a nutshell, the Aligned Rank Transform (ART) allows using
+    parametric tests on nonparametric data. artR (and ARTool)
+    applies this transformation on an input dataset, and generates
+    a new dataset with extra aligned and ranked columns. artR allows
+    applying this transform within R, avoiding the need for an
+    external, Windows-only step in the data-analysis workflow.
+Version: 0.1
+Authors@R: person("Juan Sebastian", "Casallas", role = c("cre", "trl"),
+                  email = "casallas@iastate.edu")
+License: BSD_3_clause + file LICENSE
