@@ -9,5 +9,5 @@ Description: artR is an R port of Jacob Wobbrock's C# ARTool.
     external, Windows-only step in the data-analysis workflow.
 Version: 0.1
 Authors@R: person("Juan Sebastian", "Casallas", role = c("cre", "trl"),
-                  email = "casallas@iastate.edu")
+    email = "casallas@iastate.edu")
 License: BSD_3_clause + file LICENSE

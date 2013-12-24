@@ -4,13 +4,14 @@
 #
 # Ported to R by Juan Sebastian Casallas in 2013
 
-# Produces the powerset of a given set. The powerset contains 2^n items
-# for a set with n items. It includes the empty set and the original set
-# itself.
-# </summary>
-# <param name="set">The set on which to compute the powerset.</param>
-# <returns>The powerset of the given set. Note that factors are returned as character</returns>
-# See also: package sets, 2^s can do it, but subset access seems more complicated
+#' Produces the powerset of a given set. The powerset contains 2^n items
+#' for a set with n items. It includes the empty set and the original set
+#' itself.
+#'
+#' @param The set on which to compute the powerset.</param>
+#' @return The powerset of the given set. Note that factors are returned as character
+#' @seealso package sets, 2^s can do it, but subset access seems more complicated
+#' @export
 PowerSet <- function(set)
 {
   if(is.factor(set))

@@ -12,6 +12,11 @@ available for Windows (or, if you're courageous to Unix via Mono), and it involv
 step in the data analysis worflow. Thus, I've created this R port to integrate the ART in my usual
 *nix–R workflow. More details about ARTool and ART are presented in the ARTool website and in [2].
 
+Installation
+------------
+
+This package can be installed using devtools: `devtools::install_github("casallas/artR")`
+
 Usage
 -----
 As with ARTool, input for the `ART` function should be a "long format" data frame, whose first column
