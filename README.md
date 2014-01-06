@@ -15,7 +15,7 @@ step in the data analysis worflow. Thus, I've created this R port to integrate t
 Installation
 ------------
 
-This package can be installed using devtools: `devtools::install_github("casallas/artR")`
+This package can be installed using [devtools](http://cran.r-project.org/web/packages/devtools/): `devtools::install_github("casallas/artR")`
 
 Usage
 -----
