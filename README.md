@@ -26,13 +26,14 @@ all the columns in between correspond to the X, or independent variables.
 The following example uses Table 1 from [1] provided in ARTool (https://depts.washington.edu/aimgroup/proj/art/ARTool.zip)
 ```
 library(compare) # Compare equal
-source("art.r", chdir=T)
+library(artR) # ART
 
 higgins1 <- within(read.csv("Higgins1990-Table1.csv"), {
 	Subject <- factor(Subject)
 	Row <- factor(Row)
 	Column <- factor(Column)
 })
+higgins1.art <- ART(higgins1)
 
 # Results given by ARTool
 higgins1.artool <- within(read.csv("Higgins1990-Table1.art.csv"), {
@@ -63,7 +64,7 @@ ezANOVA(data=higgins1.art, dv=ART.Response.Column, wid=Subject, between=.(Row, C
 Differences with ARTool
 -----------------------
 
-ARTool and artR give very similar results, in terms of number of columns and values.
+ARTool and artR give very similar results in terms of number of columns and values.
 One minor difference is the name of the columns:
 
 Columns |ARTool                |artR
@@ -84,7 +85,7 @@ summary(aov(ART.Response.Row.x.Column ~ Row*Column, data=higgins1.art))
 # Residuals   27   3500  129.61
 ```
 
-Although the expected data frame's header should have the form "Subject", "X1", "X2", ..., "Xn", "Y", it's easy
+Even though the expected data frame's header should have the form "Subject", "X1", "X2", ..., "Xn", "Y", it's easy
 to transform any data frame to this format before calling ART:
 ```
 df <- data.frame(X1=(1:100)^2, subj=1:100, Y=log(1:100), X2=sqrt(1:100))
